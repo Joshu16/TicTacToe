@@ -1,0 +1,136 @@
+@font-face {
+    font-family: 'Minecraftia';
+    src: url('fonts/Minecraftia-Regular.ttf') format('truetype');
+  }
+  
+
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+  
+
+html {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Minecraftia', cursive;
+    color: rgb(0, 0, 0);
+    background-color: black;
+    animation: fadeIn 1s ease-in-out;
+
+}
+
+body{
+    background-blend-mode: darken;
+    background: 
+    rgba(0, 0, 0, 0.315)
+    url(https://news.temple.edu/sites/news/files/styles/article_hero/public/flappy_bird_resize_article_hero_1.gif?itok=pb9Tpb_z&c=ec04b0b386a8865d81daa22bcadb37d0);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+
+
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+
+#gameContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+
+}
+
+h1{
+    font-family: 'Minecraftia', cursive;
+    background: linear-gradient(#4CAF50, #398b3d);
+    color: white;
+
+    padding-top: 20px;
+    padding-inline: 20px;
+    border-radius: 15px;
+
+    cursor: default;
+    animation: bounce 3s infinite;    
+
+}
+
+h2{
+    font-family: 'Minecraftia', cursive;
+    color: white;
+    cursor: default;
+
+    animation: SideSide 3s infinite;
+}
+
+.cell {
+    font-family: "Pixelfied", cursive;
+    color: white;
+    width: 75px;
+    height: 75px;
+    border: 5px solid #4CAF50;
+    box-shadow: 0 0 0 5px #085e0b;
+
+    border-radius: 5px;
+
+    font-size: 50px;
+    cursor: pointer;
+
+    display: flex;               /* Flex container */
+    justify-content: center;    /* Centra horizontalmente */
+    align-items: center;        /* Centra verticalmente */
+}
+
+
+#cellContainer{
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    width: 225px;
+}
+
+#restartBtn {
+    font-family: 'Minecraftia', cursive;
+    font-size: 20px;
+    color: white;
+    background: linear-gradient(#4CAF50, #398b3d);
+    border-radius: 10px;
+    border: none;
+
+    padding-top: 12px;
+    padding-left: 10px;
+
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+}
+
+#restartBtn:hover {
+    background-color: #45a049;
+    transform: scale(1.05);
+}
+
+@keyframes bounce {
+    0%   { transform: translateY(0); }
+    50%  { transform: translateY(-10px); }
+    100% { transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@keyframes SideSide{
+    0% { transform: translateX(0); }
+    50% { transform: translateX(-10px); }
+    75% { transform: translateX(10px); }
+    100% { transform: translateX(0); }
+}
